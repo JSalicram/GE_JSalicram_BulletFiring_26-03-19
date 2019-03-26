@@ -10,6 +10,7 @@ public class LevelManager : MonoBehaviour {
     public static LevelManager instance;
 
     public GameObject target;
+    public TargetScan targetScan;
 
     private void Awake()
     {
@@ -25,7 +26,13 @@ public class LevelManager : MonoBehaviour {
             worldPos.z = 0;
             Instantiate(target, worldPos, Quaternion.identity);
 
+            
             //FireBullet();
+        }
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            targetScan.DetectTargets();
         }
     }
 
