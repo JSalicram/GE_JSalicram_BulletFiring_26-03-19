@@ -200,7 +200,7 @@ public class CharacterController : MonoBehaviour
         /* Finally we have a duck animation. Using Unity's Input class, get the value of the "Fire1" button.
          * 
          */
-        duck = Input.GetButton("Fire1");
+        duck = Input.GetButton("Fire2");
 
         if (duck)
         {
